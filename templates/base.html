@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/lm.png') }}" type="image/x-icon">
+        <title>{% block title %}LM Informática{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
+    </head>
+    <body>
+        <div class="site-wrapper"> 
+            <header class="top-header">
+                <div class="container header-content">
+                    <div class="logo-and-social">    
+                        <div class="logo">
+                            <a href="/">
+                                <img src="{{ url_for('static', filename='images/logo4k.png') }}" alt="Logo da Minha Empresa">
+                            </a>
+                        </div>
+                        
+                        <div class="social-icons">      <!-- # div para os ícones -->
+                            <a href="https://www.instagram.com/lminfordtna" target="_blank" aria-label="Instagram">     
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/lminfordtna" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://wa.me/5538991155388" target="_blank" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://g.co/kgs/pQGp746" target="_blank" aria-label="Google Maps">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </div>     
+                    <nav class="main-nav"> 
+                        <ul>
+                            <li><a href="/">Inicio</a></li>                    
+                            <li class="has-dropdown"> <!-- Classe 'has-dropdown' para estilização -->
+                                <a href="{{ url_for('servicos') }}">Serviços <i class="fas fa-caret-down"></i></a> <!-- ícone de seta para indicar dropdown -->
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="/manu_preventiva">Manutenção Preventiva</a></li>
+                                        <li><a href="/manu_corretiva">Manutenção Corretiva </a></li>
+                                        <li><a href="/upgrades">Upgrades</a></li>
+                                        <li><a href="/formata_bkp">Formatação e Backup</a></li>                                       
+                                        <li><a href="/consultoria">Consultoria em TI</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="/contato">Contato</a></li>
+                            <li><a href="/sobre">Sobre Nós</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+            <main class="container">
+                {% block content %}{% endblock %}
+            </main>
+        
+            <a href="https://wa.me/5538991155388?text=Olá!%20Gostaria%20de%20mais%20informações." 
+                class="whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>    
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>Sobre Nós</h4>
+                    <ul>
+                        <li><a href="#">Nossa História</a></li>
+                        <li><a href="#">Missão e Valores</a></li>
+                        <li><a href="#">Nossa Equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="/contato">Fale Conosco</a></li>
+                        <li><a href="mailto:contato.lminforat@gmail.com">Email: contato.lminforat@gmail.com</a></li>
+                        <li><a href="tel:+5538991155388">Telefone: (38) 99115-5388</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="/servicos">Serviços</a></li>
+                        <li><a href="/politica_termos">Política de Privacidade e Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Endereço</h4>
+                    <p>Rua Enologia, Nº 37</p>
+                    <p>Bairro Bela Vista, Diamantina - MG</p>
+                    <p>CEP: 39100-000</p>
+                    <div class="footer-social-icons">
+                        <a href="https://facebook.com/lminfordtna" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/lminfordtna" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5538991155388" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://g.co/kgs/pQGp746" target="_blank" aria-label="Google Maps"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LM Informática. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>

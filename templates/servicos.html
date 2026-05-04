@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Serviços{% endblock %}
+
+{% block content %}
+    <main>
+        <section class="services2-intro">
+            <div class="container">
+                <h1>Nossos Serviços Especializados</h1>
+            </div>
+        </section>
+
+        <section class="services2-grid-section">
+            <div class="container">
+                <div class="services2-grid">
+                    <div class="service2-card">
+                        <div class="service2-icon">
+                            <i class="fas fa-heartbeat"></i> {# Ícone de saúde/inspeção #}
+                        </div>
+                        <h3>Manutenção Preventiva</h3>
+                        <p>Cuidamos da saúde dos seus equipamentos com inspeções regulares e ajustes precisos, prevenindo problemas antes que eles aconteçam. Maximize a vida útil dos seus dispositivos.</p>
+                        <a href="/manu_preventiva" class="btn-saiba-mais">Saiba Mais</a> {# Link para página detalhada do serviço #}
+                    </div>
+
+                    <div class="service2-card">
+                        <div class="service2-icon">
+                            <i class="fas fa-tools"></i> {# Ícone de ferramentas/reparo #}
+                        </div>
+                        <h3>Manutenção Corretiva</h3>
+                        <p>Atendimento rápido e eficaz para solucionar qualquer problema técnico, garantindo que seus equipamentos voltem a operar com máxima performance e sem interrupções.</p>
+                        <a href="/manu_corretiva" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+
+                    <div class="service2-card">
+                        <div class="service2-icon">
+                            <i class="fas fa-arrow-alt-circle-up"></i> {# Ícone de atualização/seta para cima #}
+                        </div>
+                        <h3>Upgrades</h3>
+                        <p>Atualize seus sistemas e equipamentos com nossos serviços de upgrades, incorporando as últimas tecnologias para melhorar desempenho, eficiência e segurança.</p>
+                        <a href="/upgrades" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+
+                    <div class="service2-card">
+                        <div class="service2-icon">
+                            <i class="fas fa-hdd"></i> {# Ícone de HD/dados #}
+                        </div>
+                        <h3>Formatação e Backup</h3>
+                        <p>Realizamos formatação completa do seu sistema e um backup seguro dos seus dados importantes, garantindo a integridade da informação e um sistema limpo.</p>
+                        <a href="/formata_bkp" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+
+                    <div class="service2-card">
+                        <div class="service2-icon">
+                            <i class="fas fa-lightbulb"></i> {# Ícone de lâmpada/ideia #}
+                        </div>
+                        <h3>Consultoria em TI</h3>
+                        <p>Oferecemos consultoria especializada para identificar as melhores soluções tecnológicas para suas necessidades, otimizando processos e investimos em TI.</p>
+                        <a href="/consultoria" class="btn-saiba-mais">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto para Começar?</h2>
+
+                <p>Entre em contato hoje mesmo e descubra como podemos te ajudar de forma rápida e eficiente.</p>
+
+                <a href="{{ url_for('contato') }}" class="btn-cta">Fale Conosco Agora</a>
+            </div>
+        </section>
+    </main>
+{% endblock %}

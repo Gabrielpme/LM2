@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Serviços de Manutenção{% endblock %}
+
+{% block content %}
+<main>
+    <section class="services2-intro">
+        <div class="container">
+            <h1>Serviços de Manutenção</h1>
+            <p>Seja para prevenir problemas futuros ou para resolver uma falha inesperada, temos a solução de manutenção ideal para o seu equipamento.</p>
+        </div>
+    </section>
+
+    <section class="services2-grid-section">
+        <div class="container">
+            <div class="services2-grid">
+                
+                <div class="service2-card">
+                    <div class="service2-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>O "check-up" completo do seu computador. Ideal para evitar problemas, aumentar a vida útil e garantir o máximo desempenho do seu equipamento.</p>
+                    <a href="{{ url_for('manu_preventiva') }}" class="btn-saiba-mais">Saiba Mais</a>
+                </div>
+
+                <div class="service2-card">
+                    <div class="service2-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção Corretiva</h3>
+                    <p>Seu equipamento apresentou um problema? Resolvemos falhas de hardware e software para que você volte a usá-lo o mais rápido possível.</p>
+                    <a href="{{ url_for('manu_corretiva') }}" class="btn-saiba-mais">Saiba Mais</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

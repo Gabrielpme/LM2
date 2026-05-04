@@ -1,0 +1,104 @@
+{% extends 'base.html' %} {# Estende o template base.html para herdar a estrutura básica do site. #}
+
+{% block title %}LM Informática - Upgrades{% endblock %} {# Define o título da página para a aba do navegador. #}
+
+{% block content %} {# Inicia o bloco de conteúdo específico para esta página. #}
+<main> {# Tag semântica para o conteúdo principal. #}
+
+    {# Um cabeçalho visual para a página, com um título e uma breve descrição. #}
+    <section class="service-hero">
+        <div class="container"> {# Centraliza o conteúdo. #}
+            <h1>Upgrades para o Seu Computador</h1> {# Título principal. #}
+        </div>
+    </section>
+
+    {# Destaca os benefícios de atualizar o hardware, usando um layout de grade com ícones. #}
+    <section class="service-benefits">
+        <div class="container"> {# Centraliza o conteúdo. #}
+            <h2>Por Que Fazer um Upgrade é a Melhor Opção?</h2> {# Título da seção. #}
+            <div class="service-grid"> {# Contêiner para os cards de benefício em grade. #}
+                
+                {# Card de Benefício: Melhor Desempenho #}
+                <div class="service-item">
+                    <i class="fas fa-rocket"></i> {# Ícone de foguete para velocidade. #}
+                    <h3>Melhor Desempenho</h3> {# Título do card. #}
+                    <p>Execute aplicativos e jogos pesados com fluidez, otimizando seu tempo e produtividade.</p> {# Descrição. #}
+                </div>
+
+                {# Card de Benefício: Maior Eficiência #}
+                <div class="service-item">
+                    <i class="fas fa-charging-station"></i> {# Ícone para eficiência energética. #}
+                    <h3>Maior Eficiência</h3>
+                    <p>Componentes modernos consomem menos energia e geram menos calor, prolongando a vida útil da bateria e do sistema.</p>
+                </div>
+
+                {# Card de Benefício: Compatibilidade Futura #}
+                <div class="service-item">
+                    <i class="fas fa-unlock-alt"></i> {# Ícone de cadeado aberto para desbloquear o futuro. #}
+                    <h3>Compatibilidade Futura</h3>
+                    <p>Um upgrade permite que seu equipamento rode os sistemas operacionais e softwares mais recentes sem problemas.</p>
+                </div>
+
+                {# Card de Benefício: Custo-Benefício #}
+                <div class="service-item">
+                    <i class="fas fa-wallet"></i> {# Ícone de carteira para economia. #}
+                    <h3>Custo-Benefício</h3>
+                    <p>Upgrade é uma solução muito mais econômica do que a compra de um equipamento novo, com resultados impressionantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Detalha os tipos de upgrade oferecidos, com texto e uma imagem ao lado. #}
+    <section class="feature-section">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-text">
+                <h2>Que Tipo de Upgrade Você Precisa?</h2>
+                <p>Identificamos e implementamos as atualizações que trarão o maior ganho de performance para o seu equipamento, de acordo com seu uso e orçamento.</p>
+                <div class="services-icon-grid">
+                    <div class="service-icon-item">
+                        <i class="fas fa-hdd"></i>
+                        <span>Instalação de SSD</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-memory"></i>
+                        <span>Aumento de RAM</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-microchip"></i>
+                        <span>Troca de Processador</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-video"></i>
+                        <span>Placa de Vídeo</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-wifi"></i>
+                        <span>Melhora de Conectividade</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Outros Componentes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='images/upgrades_details.jpg') }}" alt="Detalhes de Upgrades de Computador" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Começar?</h2>
+
+            <p>Entre em contato hoje mesmo e descubra como podemos te ajudar de forma rápida e eficiente.</p>
+
+            <a href="{{ url_for('contato') }}" class="btn-cta">Fale Conosco Agora</a>
+        </div>
+    </section>
+
+</main>
+{% endblock %} {# Finaliza o bloco de conteúdo. #}

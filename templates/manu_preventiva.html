@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Manutenção Preventiva{% endblock %}
+
+{% block content %}
+<main>
+    <section class="service-hero">
+        <div class="container">
+            <h1>Manutenção Preventiva</h1>            
+        </div>
+    </section>
+
+    <section class="service-benefits">
+        <div class="container">
+            <h2>Por Que é Essencial?</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Segurança dos Dados</h3>
+                    <p>Reduz o risco de perdas inesperadas de dados causadas por falhas de hardware ou software.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Desempenho Otimizado</h3>
+                    <p>Mantém seu sistema rápido e eficiente, evitando lentidão e travamentos desnecessários.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Maior Vida Útil</h3>
+                    <p><br>Prolonga a durabilidade dos seus equipamentos, adiando a necessidade de substituição.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Economia a Longo Prazo</h3>
+                    <p>Evita gastos maiores com reparos emergenciais e substituição de peças caras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-text">
+                <h2>O Que Inclui Nosso Serviço?</h2>
+                <p>Nossa manutenção preventiva é um "check-up" completo que visa cobrir todos os aspectos cruciais para a saúde e longevidade do seu computador.</p>
+                <div class="services-icon-grid">
+                    <div class="service-icon-item">
+                        <i class="fas fa-broom"></i>
+                        <span>Limpeza Física Completa</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Otimização de Sistema</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-hdd"></i>
+                        <span>Verificação de Disco</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Atualização de Drivers</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-microchip"></i>
+                        <span>Checagem de Hardware</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-thermometer-half"></i>
+                        <span>Testes de Estabilidade</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='images/manutencao_preventiva_details.jpg') }}" alt="Detalhes da Manutenção Preventiva" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Começar?</h2>
+
+            <p>Entre em contato hoje mesmo e descubra como podemos te ajudar de forma rápida e eficiente.</p>
+
+            <a href="{{ url_for('contato') }}" class="btn-cta">Fale Conosco Agora</a>
+        </div>
+    </section>
+    
+</main>
+{% endblock %}

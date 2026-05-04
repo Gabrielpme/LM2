@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Sobre Nós{% endblock %}
+
+{% block content %}
+<main>
+    <section class="about-hero">
+        <div class="container">
+            <h1>Sobre a LM Informática</h1>
+            <p>Conheça a nossa história, os pilares que nos movem e o que nos faz ser a escolha ideal para suas necessidades em tecnologia.</p>
+        </div>
+    </section>
+
+    <section class="about-history">
+        <div class="container">
+            <div class="history-content">
+                <div class="history-text">
+                    <h2>Nossa História e Compromisso</h2>
+                    <p>A <strong>LM Informática</strong> foi fundada em <strong>2017</strong> com um objetivo claro: fornecer serviços de manutenção e conserto de notebooks e desktops de alta qualidade, garantindo a satisfação completa de cada cliente.</p>
+                    <p>Desde o início, nos dedicamos a oferecer um atendimento personalizado, com profissionais altamente capacitados e apaixonados por tecnologia. Nosso crescimento é reflexo do compromisso em resolver os desafios dos nossos clientes de forma eficiente e transparente.</p>
+                    <p>Mais do que reparos, construímos relacionamentos duradouros, baseados na confiança e na excelência dos nossos serviços.</p>
+                </div>
+                <div class="history-image">                    
+                    <img src="{{ url_for('static', filename='images/loja.jpg') }}" alt="LM Informática" class="img-responsive"> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-colab">
+        <div class="container">
+            <h2>Nossos Colaboradores</h2>
+            <div class="colab-grid">
+                <div class="colab-item">
+                    <div class="colab-image">                    
+                        <img src="{{ url_for('static', filename='images/loja.jpg') }}" alt="LM Informática" class="img-responsive"> 
+                    </div>
+                    <div class="colab-content">
+                        <h3>Lucas Machado</h3>
+                        <p>Texto Descritivo.</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <section class="about-why-us">
+        <div class="container">
+            <h2>Por Que Escolher a LM Informática?</h2>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Profissionais Capacitados</h4>
+                    <p>Nossa equipe é formada por especialistas com profundo conhecimento em tecnologia.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Atendimento Personalizado</h4>
+                    <p>Oferecemos soluções sob medida para as suas necessidades específicas.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Qualidade e Segurança</h4>
+                    <p>Trabalhamos com peças de qualidade e garantimos a segurança dos seus dados.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-history"></i>
+                    <h4>Rapidez e Eficiência</h4>
+                    <p>Buscamos sempre o diagnóstico e a solução mais ágil para você.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="{{ url_for('contato') }}" class="btn-primary-inverted">Fale Conosco Hoje!</a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

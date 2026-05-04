@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {# Estende o template base.html para herdar a estrutura básica do site. #}
+
+{% block title %}LM Informática - Coleta e Entrega{% endblock %} {# Define o título da página. #}
+
+{% block content %} {# Inicia o bloco de conteúdo. #}
+<main> {# Conteúdo principal da página. #}
+
+    {# Uma seção simples e focada para a mensagem central. #}
+    <section class="about-hero">
+        <div class="container"> {# Centraliza o conteúdo. #}
+            <h1>Nós Vamos até Você.</h1> {# Título principal chamativo. #}
+            <p>Pensando na sua comodidade, a LM Informática oferece um serviço gratuito de coleta para o seu equipamento. Cuidamos de tudo para que você não precise sair de casa.</p>
+        </div>
+    </section>
+
+    {# Explica o processo em 3 passos simples, com ícones para visualização rápida. #}
+    <section class="pickup-steps">
+        <div class="container"> {# Centraliza o conteúdo. #}
+            <h2>Como Funciona? Simples e Rápido.</h2>
+            <div class="steps-grid">
+                
+                {# Passo 1: O Contato #}
+                <div class="step-item">
+                    <i class="fas fa-phone-alt"></i> {# Ícone de telefone. #}
+                    <h3>1. Entre em Contato</h3>
+                    <p>Agende a coleta do seu equipamento pelo nosso <a href="https://wa.me/5538991155388" target="_blank">WhatsApp</a> ou telefone. Combinamos o dia e o horário que forem melhores para você.</p>
+                </div>
+
+                {# Passo 2: A Coleta #}
+                <div class="step-item">
+                    <i class="fas fa-truck-moving"></i> {# Ícone de caminhão para a coleta. #}
+                    <h3>2. Coletamos</h3>
+                    <p>Nossa equipe vai até a sua residência ou escritório para coletar o equipamento, sem custo adicional. Rápido e seguro.</p>
+                </div>
+
+                {# Passo 3: A Entrega #}
+                <div class="step-item">
+                    <i class="fas fa-wrench"></i> {# Ícone de chave de fenda para o serviço. #}
+                    <h3>3. Fazemos o orçamento Serviço </h3>
+                    <p>Após a análise técnica, enviamos um orçamento detalhado. Com a sua aprovação, iniciamos o reparo.</p>
+                </div>
+
+            </div>
+        </div>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Começar?</h2>
+
+            <p>Entre em contato hoje mesmo e descubra como podemos te ajudar de forma rápida e eficiente.</p>
+
+            <a href="{{ url_for('contato') }}" class="btn-cta">Fale Conosco Agora</a>
+        </div>
+    </section>
+    </section>
+
+    
+</main>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Formatação e Backup{% endblock %} 
+
+{% block content %}
+<main> {# Tag semântica para o conteúdo principal. #}
+
+    {# Cabeçalho visual da página. #}
+    <section class="service-hero">
+        <div class="container"> {# Centraliza o conteúdo. #}
+            <h1>Formatação e Backup de Dados</h1> {# Título principal. #}
+            <p>Deixe seu sistema como novo e proteja suas informações mais importantes com nossos serviços de formatação e backup, garantindo segurança e tranquilidade.</p> {# Subtítulo. #}
+        </div>
+    </section>
+
+    <section class="feature-section">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='images/formatacao_details.jpg') }}" alt="Formatação de Computadores">
+            </div>
+            <div class="feature-text">
+                <h2>Formatação Completa</h2>
+                <p>Deixe seu sistema como novo. A formatação é a solução ideal para "resetar" o sistema, deixando-o limpo, rápido e livre de erros.</p>
+                <div class="services-icon-grid">
+                    <div class="service-icon-item">
+                        <i class="fas fa-virus-slash"></i>
+                        <span>Remoção de Vírus</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fab fa-windows"></i>
+                        <span>Instalação de S.O.</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-cogs"></i>
+                        <span>Instalação de Drivers</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Otimização Inicial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-section feature-section-inverted">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='images/backup_details.jpg') }}" alt="Backup de Dados">
+            </div>
+            <div class="feature-text">
+                <h2>Backup Seguro de Dados</h2>
+                <p>Proteja-se contra imprevistos. Garantimos a segurança de seus arquivos pessoais e profissionais antes de qualquer procedimento.</p>
+                <div class="services-icon-grid">
+                    <div class="service-icon-item">
+                        <i class="fas fa-copy"></i>
+                        <span>Cópia Completa</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-check-double"></i>
+                        <span>Análise de Integridade</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-database"></i>
+                        <span>Armazenamento Seguro</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-undo-alt"></i>
+                        <span>Restauração Pós-Serviço</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Começar?</h2>
+
+            <p>Entre em contato hoje mesmo e descubra como podemos te ajudar a resolver seus problemas de tecnologia de forma rápida e eficiente.</p>
+
+            <a href="{{ url_for('contato') }}" class="btn-cta">Fale Conosco Agora</a>
+        </div>
+    </section>
+    
+</main>
+{% endblock %} {# Finaliza o bloco de conteúdo. #}

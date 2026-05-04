@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Suporte Técnico Remoto{% endblock %}
+
+{% block content %}
+<main>
+    <section class="service-hero">
+        <div class="container">
+            <h1>Suporte Técnico Remoto</h1>
+            <p>Resolva problemas de lentidão, vírus e erros de software com agilidade e segurança, sem precisar sair de casa.</p>
+        </div>
+    </section>
+
+    <section class="service-benefits">
+        <div class="container">
+            <h2>Por que escolher o Suporte Remoto?</h2>
+            <div class="service-grid">
+                
+                <div class="service-item">
+                    <i class="fas fa-couch"></i>
+                    <h3>Conforto e Comodidade</h3>
+                    <p>Você não precisa desligar ou transportar seu equipamento. Atendemos você no conforto da sua casa ou escritório.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Agilidade no Atendimento</h3>
+                    <p>O diagnóstico e a solução de problemas de software são muito mais rápidos, resolvendo sua urgência com eficiência.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Excelente Custo-Benefício</h3>
+                    <p>O suporte remoto é uma alternativa mais econômica que a visita técnica presencial para a maioria dos problemas de software.</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-eye"></i>
+                    <h3>Transparência Total</h3>
+                    <p>Você acompanha todo o procedimento em tempo real na sua própria tela, vendo exatamente o que está sendo feito no seu computador.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-text">
+                <h2>Quais Problemas Resolvemos Remotamente?</h2>
+                <p>Através de uma conexão segura, podemos acessar seu computador para realizar uma série de serviços essenciais e resolver problemas do dia a dia.</p>
+                <div class="services-icon-grid">
+                    <div class="service-icon-item">
+                        <i class="fas fa-virus-slash"></i>
+                        <span>Remoção de Vírus</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Otimização do Sistema</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-cogs"></i>
+                        <span>Instalação de Programas</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-bug"></i>
+                        <span>Correção de Erros</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Atualização de Drivers</span>
+                    </div>
+                    <div class="service-icon-item">
+                        <i class="fas fa-print"></i>
+                        <span>Configuração Geral</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="{{ url_for('static', filename='images/remoto.png') }}" alt="Técnico prestando suporte remoto" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Seu computador está lento ou com algum problema?</h2>
+            <p>Não deixe para depois. Agende uma sessão de suporte remoto e resolva isso de forma rápida e segura.</p>
+            <a href="{{ url_for('contato') }}" class="btn-cta">Agendar Suporte Remoto</a>
+        </div>
+    </section>
+
+</main>
+{% endblock %}

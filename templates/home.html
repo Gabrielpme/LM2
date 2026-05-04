@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}LM Informática - Inicio{% endblock %}
+
+{% block content %}
+<!--<section class="hero"> # Primeiro Banner #
+        <div class="hero-content">
+            <a href="/servicos" class="btn">Conheça todos os nossos serviços</a>
+        </div>
+    </section> -->
+    
+    <div class="service-blocks">   
+        <div class="service-card">   
+            <img src="{{ url_for('static', filename='images/manutencao.png') }}" alt="Manutenção"> 
+            <h3>Manutenção</h3>
+            <p>Manutenções preventivas e corretivas para garantir o melhor desempenho do seu equipamento.</p>
+            <a href="/manutencao" class="btn-saiba-mais">Saiba Mais</a> {# Link para página detalhada do serviço #}    
+        </div>
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/upgrade.png') }}" alt="Upgrade">
+            <h3>Upgrade</h3>
+            <p>Atualize seu notebook ou desktop com componentes modernos e aumente sua performance.</p>
+            <a href="/upgrades" class="btn-saiba-mais">Saiba Mais</a> {# Link para página detalhada do serviço #}
+        </div>
+        <div class="service-card"> 
+            <img src="{{ url_for('static', filename='images/remoto.png') }}" alt="Suporte Remoto">
+            <h3>Suporte Remoto</h3>
+            <p>Atendimento rápido e eficiente sem sair de casa, via acesso remoto seguro.</p>
+            <a href="/consultoria" class="btn-saiba-mais">Saiba Mais</a> {# Link para página detalhada do serviço #}
+        </div>
+        <div class="service-card"> 
+            <img src="{{ url_for('static', filename='images/buscar.png') }}" alt="Buscamos seu equipamento">
+            <h3>Buscamos seu equipamento</h3>
+            <p>Buscamos e Entregamos seu equipamento com segurança no conforto de sua casa.</p>
+            <a href="/buscamos_equip" class="btn-saiba-mais">Saiba Mais</a> {# Link para página detalhada do serviço #}
+        </div>
+    </div>
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <img src="{{ url_for('static', filename='images/desktop.png') }}" alt="Serviços para Desktop"> 
+                </div>
+                <div class="feature-text">
+                    <h2>Serviços para Desktops</h2>
+                    <p>Soluções completas para seu computador de mesa, desde a montagem de uma máquina nova até a solução de problemas complexos.</p>
+                    <div class="services-icon-grid">
+                        <div class="service-icon-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Montagem Personalizada</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <i class="fas fa-wrench"></i>
+                            <span>Manutenção e Reparos</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>Formatação e Backup</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <i class="fas fa-video"></i>
+                            <span>Upgrade de Peças</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section feature-section-inverted">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <img src="{{ url_for('static', filename='images/notebook.png') }}" alt="Serviços para Notebook"> 
+                </div>
+                <div class="feature-text">
+                    <h2>Serviços para Notebooks</h2>
+                    <p>Especialistas em resolver os problemas mais comuns em notebooks de todas as marcas, com agilidade e peças de qualidade.</p>
+                    <div class="services-icon-grid">
+                        <div class="service-icon-item">
+                            <i class="fas fa-laptop-medical"></i>
+                            <span>Manutenção e Reparos</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <i class="fas fa-keyboard"></i>
+                            <span>Troca de Teclado</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <i class="fas fa-tv"></i>
+                            <span>Troca de Tela</span>
+                        </div>
+                        <div class="service-icon-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Reparo de Carcaça</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">  <!-- Seção de informções-->
+        <h2>O que fazemos</h2>
+        <p>Soluções eficazes para seu equipamento, com manutenções preventivas, corretivas e upgrades para um melhor aproveitamento do seu equipamento! .</p>
+        <p>Entre em contato hoje mesmo e descubra como podemos te ajudar.</p>
+    </section>
+{% endblock %}
