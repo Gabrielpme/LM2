@@ -65,6 +65,27 @@
                 class="whatsapp-button" target="_blank">
                 <i class="fab fa-whatsapp"></i>
             </a>
+            <!-- Estrutura do Chat-Box -->
+            <div id="chat-wrapper">
+                <button id="chat-toggle" title="Abrir Chat">
+                    <i class="fas fa-comments"></i>
+                </button>
+
+                <div id="chat-window" class="chat-hidden">
+                    <div class="chat-header">
+                        <span><i class="fas fa-laptop-code"></i> Suporte LM</span>
+                        <button id="chat-close">&times;</button>
+                    </div>
+                    <div id="chat-messages">
+                        <div class="message bot">Olá! Como podemos te ajudar?</div>
+                    </div>
+                    <div class="chat-footer">
+                        <input type="text" id="chat-input" placeholder="Digite sua dúvida...">
+                        <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
         </div>    
         <footer class="main-footer">
             <div class="footer-container">
@@ -108,5 +129,6 @@
                 <p>&copy; 2026 LM Informática. Todos os direitos reservados.</p>
             </div>
         </footer>
+
     </body>
 </html>
