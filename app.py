@@ -5,7 +5,7 @@ import json
 app = Flask(__name__)
 app.secret_key = 'teste'
 
-GROQ_API_KEY = "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"  # Cole sua chave do Groq aqui
+GROQ_API_KEY = "gsk_jXCcxfLXORTc5BCDVoTxWGdyb3FYb7uuWoY8TLXTeUQOepYfY4C"  # Cole sua chave do Groq aqui
 
 SYSTEM_PROMPT = """Você é a Ellem, a assistente virtual da LM Informática, uma assistência técnica de computadores localizada em Diamantina/MG.
  
